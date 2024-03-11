@@ -3,7 +3,7 @@
 
 ## How Use WikiReaver
 
-> ![TIP]
+> [!TIP]
 > Pass the code lang is optional, but pass term is obrigatory
 
 Do you can use default language: "english" or set you own language passing the parameter --lang with your code lang. Ex: pt, ru, ...
