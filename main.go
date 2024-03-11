@@ -2,8 +2,10 @@ package main
 
 import (
 	"WikiReaver/linkGenerator/url"
+	urltest "WikiReaver/linkGenerator/urlTest"
 	"flag"
 	"fmt"
+	"log"
 )
 
 func main() {
@@ -22,5 +24,11 @@ func main() {
 		return
 	}
 
-	url.MountFullUrl(*lang, *term)
+	url := url.MountFullUrl(*lang, *term)
+	isOk := urltest.CheckUrl(url)
+
+	if isOk == nil {
+		log.Println("Este link está disponivel: ", url)
+		return
+	}
 }
